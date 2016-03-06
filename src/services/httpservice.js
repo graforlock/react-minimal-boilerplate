@@ -1,16 +1,9 @@
-var Fetch = require('whatwg-fetch');
-var baseUrl = 'http://localhost:8080';
+import Fetch from 'whatwg-fetch';
+const baseUrl = 'http://localhost:8080';
 
-var service = {
-  get: function(url) {
-    return fetch(baseUrl + url)
-    .then(function(response) {
-      return response.json();
-    });
-  },
-  post: function(url) {
-
-  }
+const service = {
+  get: (url) => fetch(baseUrl + url).then(response => response.json()),
+  post: (url) => {}
 };
 
-module.exports = service;
+export default service;
