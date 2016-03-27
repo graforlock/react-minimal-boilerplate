@@ -1,9 +1,10 @@
 import React from 'react';
 import expect from 'expect';
-import { render } from 'helpers/render';
+import { render, fakeDOM } from 'helpers/render';
 import expectJSX from 'expect-jsx';
 expect.extend(expectJSX);
 
+fakeDOM();
 
 const TestComponent = ({greeting}) => (
     <div>{greeting}</div>

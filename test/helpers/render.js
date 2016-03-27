@@ -15,4 +15,4 @@ const fakeDOM = () => {
   require('react/lib/ExecutionEnvironment').canUseDOM = true;
 };
 
-export { render };
+export { render, fakeDOM };
