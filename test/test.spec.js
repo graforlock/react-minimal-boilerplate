@@ -1,6 +1,6 @@
 import React from 'react';
 import expect from 'expect';
-import TestUtils from 'react-addons-test-utils';
+import { render } from 'helpers/render';
 import expectJSX from 'expect-jsx';
 expect.extend(expectJSX);
 
@@ -11,9 +11,7 @@ const TestComponent = ({greeting}) => (
 
 describe('TestComponent', () => {
   it('should have the same JSX output',()=> {
-    const renderer = TestUtils.createRenderer();
-    renderer.render(<TestComponent greeting='hello' />);
-    const actual = renderer.getRenderOutput();
+    const actual = render(<TestComponent greeting='hello' />)
     const expected = (
       <div>hello</div>
     );
